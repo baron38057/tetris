@@ -1,0 +1,35 @@
+﻿<Window x:Class="Tetric.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetric"
+        mc:Ignorable="d"
+        Title="Tetris" 
+        Height="800"
+        Width="400"
+        ResizeMode="NoResize">
+    <Grid>
+        <Canvas Name ="GameCanvas" 
+                Background="Black" 
+                Width="300"
+                Height="600"
+                Margin="10,50,10,10"/>
+
+        <Button Name ="StartButton"
+                Content="Start"
+                Width="100"
+                Height="30"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="10"
+                Click="StartButton_Click"/>
+        <TextBlock Name = "ScoreTextBlock"
+                   Text = "{Binding Score}"
+                   Foreground="Black"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="10"/>
+    </Grid>
+</Window>
